@@ -1,3 +1,3 @@
-function div-to-text(params) {
+function div-to-text() {
     document.getElementById("html-text").value = document.getElementById("text")
 }

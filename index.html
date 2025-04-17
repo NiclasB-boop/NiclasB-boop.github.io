@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Me">
-        <meta http-equiv="refresh" content="30">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Niclas</title>
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Welcome to website</h1>
-        <input type="text" onInput="div-to-text()" id="html-text">
-        <div id="text">
-            
-        </div>
-        <script src="script.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+</head>
+<body class="font-effect-outline">
+    <label for="Laenge">Länge:</label>
+    <input type="number" name="Laenge" id="Laenge"><br>
+    <label for="Gross">Großbuchstaben</label>
+    <input type="checkbox" name="Gross" id="Gross"><br>
+    <label for="Klein">Kleinbuchstaben</label>
+    <input type="checkbox" name="Klein" id="Klein"><br>
+    <label for="Zahl">Zahlen</label>
+    <input type="checkbox" name="Zahl" id="Zahl"><br>
+    <label for="Sonder">Sonderzeichen</label>
+    <input type="checkbox" name="Sonder" id="Sonder"><br>
+    <button onclick="Passwort()">generieren</button>
+    <p id="Passwort"></p>
+    <script src="script.js"></script>
+</body>
 </html>

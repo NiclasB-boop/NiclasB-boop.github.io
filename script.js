@@ -22,3 +22,29 @@ function Passwort() {
     }
     document.getElementById("Passwort").innerText = passwort
 }
+
+function plus() {
+    const l = document.createElement("input")
+    l.type = "color"
+    l.className = "animation"
+    l.addEventListener("input",color)
+    document.getElementById("farben").appendChild(l)
+    color()
+}
+
+function minus() {
+    const l = document.getElementById("farben")
+    const n = l.children[l.children.length-1]
+    l.removeChild(n)
+    color()
+}
+
+function color() {
+    let color = []
+    for (let i of document.querySelectorAll("input[type=color]")) {
+        color.push(i.value)
+    }
+    console.log(color)
+    document.querySelector(':root').style.setProperty("--color-gradient", color.join(", "))
+}
+color()

@@ -3,6 +3,20 @@ body {
     font-style: italic;
     font-variant: small-caps;
     font-size: 1vw ;
-    background-image: radial-gradient(circle,lime,aqua);
+    background-image: radial-gradient(var(--color-gradient))
     zoom: 369%;
+}
+:root {
+    --color-gradient: ;
+}
+.animation:hover {
+    animation-timing-function: linear;
+    animation-name: animatio;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animatio {
+    0%      {transform: translate(0rem,0rem);}
+    50%     {transform: translate(10rem,10rem);}
+    100%    {transform: translate(0rem,0rem);}
 }

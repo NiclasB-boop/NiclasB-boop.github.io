@@ -14,7 +14,7 @@ body {
     font-style: italic;
     font-variant: small-caps;
     font-size: 1vw ;
-    background-image: radial-gradient(circle,var(--color-gradient))
+    background-image: radial-gradient(circle,var(--color-gradient));
     zoom: 369%;
 }
 

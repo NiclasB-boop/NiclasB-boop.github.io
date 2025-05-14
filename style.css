@@ -15,7 +15,6 @@ body {
     font-variant: small-caps;
     font-size: 1vw ;
     background-image: radial-gradient(circle,var(--color-gradient));
-    zoom: 369%;
 }
 
 .animation:hover {

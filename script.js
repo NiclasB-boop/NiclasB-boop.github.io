@@ -22,28 +22,49 @@ function Passwort() {
     }
     document.getElementById("Passwort").innerText = passwort
 }
+const container = document.getElementById("farben");
 
 function plus() {
-    const l = document.createElement("input")
-    l.type = "color"
-    l.className = "animation"
-    l.addEventListener("input",color)
-    document.getElementById("farben").appendChild(l)
-    color()
+    const input = document.createElement("input");
+    input.type = "color";
+    input.className = "animation";
+    input.addEventListener("input", color);
+    container.appendChild(input);
+    save();
+    color();
 }
 
 function minus() {
-    const l = document.getElementById("farben")
-    const n = l.children[l.children.length-1]
-    l.removeChild(n)
-    color()
+    if (container.lastElementChild) {
+        container.removeChild(container.lastElementChild);
+        save();
+        color();
+    }
 }
 
 function color() {
-    let color = []
-    for (let i of document.querySelectorAll("input[type=color]")) {
-        color.push(i.value)
-    }
-    document.querySelector(':root').style.setProperty("--color-gradient", color.join(", "))
+    const colors = Array.from(container.querySelectorAll("input[type=color]"))
+                        .map(i => i.value);
+    document.documentElement.style.setProperty("--color-gradient", colors.join(", "));
+    save()
 }
-color()
+
+function save() {
+    for (const input of container.querySelectorAll("input[type=color]")) {
+        input.setAttribute("value", input.value);
+    }
+    localStorage.setItem("inputsHTML", container.innerHTML);
+}
+
+function load() {
+    const html = localStorage.getItem("inputsHTML");
+    if (html) {
+        container.innerHTML = html;
+        for (const input of container.querySelectorAll("input[type=color]")) {
+            input.addEventListener("input", color);
+        }
+        color();
+    }
+}
+
+load();

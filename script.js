@@ -23,8 +23,6 @@ function Passwort() {
     document.getElementById("Passwort").innerText = passwort
 }
 
-const colorsheme = localStorage.getItem("colorsheme");
-
 function plus() {
     const l = document.createElement("input")
     l.type = "color"
@@ -46,8 +44,6 @@ function color() {
     for (let i of document.querySelectorAll("input[type=color]")) {
         color.push(i.value)
     }
-    localStorage.setItem("colorsheme", document.getElementById("farben").innerHTML);
     document.querySelector(':root').style.setProperty("--color-gradient", color.join(", "))
 }
 color()
-document.getElementById("farben").innerHTML = colorsheme;

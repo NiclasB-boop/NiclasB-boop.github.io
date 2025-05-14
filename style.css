@@ -16,10 +16,9 @@ body {
     font-size: 1vw ;
     background-image: radial-gradient(circle,var(--color-gradient));
 }
-
+.animation {
+    transform: scale(1,1);
+}
 .animation:hover {
-    animation-timing-function: linear;
-    animation-name: animatio;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    transform: scale(1.2,1.2);
 }

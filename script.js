@@ -84,7 +84,7 @@ function createPrinter(text) {
     };
 }
 
-function print() {
+function printing() {
     const gen = createPrinter(document.getElementById("print-text").value)(); // Achtung: () um den Generator aufzurufen
 
     const interval = setInterval(() => {

@@ -68,3 +68,32 @@ function load() {
 }
 
 load();
+
+function createPrinter(text) {
+    return function* () {
+        let word = "";
+        for (let i = 0; i < text.length; i++) {
+            for (let j = 0; j < characters.length; j++) {
+                yield word + characters[j]; // Zeige den Versuch
+                if (text[i] === characters[j]) {
+                    word += characters[j]; // Richtigen Buchstaben hinzufügen
+                    break;
+                }
+            }
+        }
+    };
+}
+
+function print() {
+    const gen = createPrinter(document.getElementById("print-text").value)(); // Achtung: () um den Generator aufzurufen
+
+    const interval = setInterval(() => {
+        const next = gen.next();
+        if (next.done) {
+            clearInterval(interval);
+        } else {
+            document.getElementById("text").innerText = next.value;
+        }
+    }, 10); // alle 100ms
+
+}

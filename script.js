@@ -1,3 +1,4 @@
+const characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ ";
 
 function Passwort() {
     const Gross = document.getElementById("Gross").checked

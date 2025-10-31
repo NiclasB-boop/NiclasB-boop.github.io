@@ -1,42 +1,90 @@
 {
-    "question": [
-        { 
-            "type": "range", 
-            "content": {
-                "text": "hello",
-                "min": 1,
-                "max": 5
-            }
+    "questions": [
+        {
+            "text": "blablabla",
+            "type": "range",
+            "min": 0,
+            "max": 100
         },
-        { 
-            "type": "radio", 
-            "content": {
-                "text": "hello",
-                "answers": [
-                    {"gay": 1},
-                    {"not gay": 80}
-                ]
-            }
+        {
+            "text": "blablabla",
+            "type": "checkbox",
+            "options": [
+                {
+                    "text": "blablabla",
+                    "value": 1
+                },
+                {
+                    "text": "blablabla2",
+                    "value": 2
+                },
+                {
+                    "text": "blablabla3",
+                    "value": 3
+                },
+                {
+                    "text": "blablabla4",
+                    "value": 4
+                }
+            ]
         },
-        { 
-            "type": "checkbox", 
-            "content": {
-                "text": "hello",
-                "answers": [
-                    {"gay": 5},
-                    {"not gay": 80}
-                ]
-            }
+        {
+            "text": "blablabla",
+            "type": "radio",
+            "options": [
+                {
+                    "text": "blablabla",
+                    "value": 1
+                },
+                {
+                    "text": "blablabla2",
+                    "value": 2
+                },
+                {
+                    "text": "blablabla3",
+                    "value": 3
+                },
+                {
+                    "text": "blablabla4",
+                    "value": 4
+                }
+            ]
         },
-        { 
-            "type": "result_button", 
-            "content": {
-                "text": "result",
-                "percentages": [
-                    {"0": " du bist nicht gay"},
-                    {"1": " du bist gay"}
-                ]
-            }
+        {
+            "text": "blablabla",
+            "type": "radio",
+            "options": [
+                {
+                    "text": "blablabla",
+                    "value": 1
+                },
+                {
+                    "text": "blablabla2",
+                    "value": 2
+                },
+                {
+                    "text": "blablabla3",
+                    "value": 3
+                },
+                {
+                    "text": "blablabla4",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "text":"blablabla",
+            "type":"result_button"
+        }
+    ],
+    "answers": [
+        {
+            "percentage": 0,
+            "text": "blablabla"
+        },
+        {
+            "percentage": 1,
+            "text": "blablabla"
         }
     ]
 }

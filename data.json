@@ -1,33 +1,41 @@
 {
     "question": [
-        { "type": "range", "content": {
-            "text" : "hello",
-            "min" : 1,
-            "max" : 5
+        { 
+            "type": "range", 
+            "content": {
+                "text": "hello",
+                "min": 1,
+                "max": 5
             }
         },
-        { "type": "radio", "content": {
-            "text" : "hello",
-            "answers": [
-                {"gay":1},
-                {"not gay": 80}
-            ]
+        { 
+            "type": "radio", 
+            "content": {
+                "text": "hello",
+                "answers": [
+                    {"gay": 1},
+                    {"not gay": 80}
+                ]
             }
         },
-        { "type": "checkbox", "content": {
-            "text" : "hello",
-            "answers": [
-                {"gay":5},
-                {"not gay": 80}
-            ]
+        { 
+            "type": "checkbox", 
+            "content": {
+                "text": "hello",
+                "answers": [
+                    {"gay": 5},
+                    {"not gay": 80}
+                ]
             }
         },
-        { "type": "result_button", "content": {
-            "text" : "result",
-            "percentages": [
-                {0 : " du bist nicht gay"},
-                {1 : " du bist gay"}
-            ]
+        { 
+            "type": "result_button", 
+            "content": {
+                "text": "result",
+                "percentages": [
+                    {0: " du bist nicht gay"},
+                    {1: " du bist gay"}
+                ]
             }
         }
     ]
